@@ -1,0 +1,38 @@
+:host{
+    width: 100%;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1rem; /* Закругленные углы */
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05); /* Поднимается и увеличивается */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Добавляется тень */
+}
+
+.card-image {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-image {
+    transform: scale(1.1); /* Увеличение изображения внутри карточки */
+}
+
+.card-title {
+    transition: color 0.3s ease;
+}
+
+.card:hover .card-title {
+    color: #2563eb; /* Изменение цвета заголовка при наведении */
+}
+
+.card-progress {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card:hover .card-progress {
+    background-color: #2563eb; /* Фоновый цвет прогресса */
+    color: #fff; /* Белый текст */
+}

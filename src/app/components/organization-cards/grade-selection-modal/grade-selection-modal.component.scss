@@ -1,0 +1,83 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-container {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 420px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.grade-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.grade-button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #2563eb; /* Синий бордер */
+  background: none; /* Убираем фон */
+  font-size: 1rem;
+  color: #2563eb; /* Цвет текста синий */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  box-shadow: none;
+}
+
+.grade-button:hover {
+  background-color: #2563eb; /* Фон становится синим */
+  color: #fff; /* Цвет текста меняется на белый */
+  transform: scale(1.05); /* Эффект увеличения */
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.5); /* Добавляем тень */
+}
+
+.close-button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  background-color: #e3e3e3;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.close-button:hover {
+  transform: scale(1.1);
+  background-color: #d0d0d0;
+}

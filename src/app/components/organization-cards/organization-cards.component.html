@@ -1,0 +1,19 @@
+<div class="w-full grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4">
+	<fuse-card class="card h-[450px] flex flex-col justify-center items-center gap-2 px-14 py-4 pb-3 shadow-custom cursor-pointer"
+			   *ngFor="let card of filteredCards" (click)="openModal(card)">
+		<img class="card-image w-[max] rounded-3xl" [src]="card.imgUrl" alt="{{ card['name_' + currentLanguage] }}">
+		<div class="card-title text-lg font-bold w-[200px] text-center">{{ card['name_' + currentLanguage] }}</div>
+		<div class="card-progress border border-stone-300 py-[6px] px-[25px] rounded">{{ card.finished }}/{{ card.all }}</div>
+	</fuse-card>
+</div>
+
+<app-grade-selection-modal
+		*ngIf="isModalOpen"
+		[isOpen]="isModalOpen"
+		[minGrade]="minGrade"
+		[maxGrade]="maxGrade"
+		[subject]="selectedSubject"
+		(selectGrade)="navigateToGrade($event)"
+		(closeModal)="closeModal()">
+</app-grade-selection-modal>
+

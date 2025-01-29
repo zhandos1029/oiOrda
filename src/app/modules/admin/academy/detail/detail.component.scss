@@ -1,0 +1,45 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #ffffff;
+
+  .header {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.horizontal-text-container {
+  position: fixed; /* Фиксируем текст сверху */
+  top: 0; /* Отступ от верхнего края устройства */
+  left: 0;
+  width: 100%; /* Растягиваем по ширине экрана */
+  height: 3rem; /* Устанавливаем фиксированную высоту для текста */
+  background-color: #ffffff; /* Цвет фона */
+  display: flex;
+  align-items: center; /* Выравнивание текста по вертикали */
+  justify-content: center; /* Выравнивание текста по горизонтали */
+  padding: 0 1rem; /* Внутренний отступ */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для отделения от контента */
+  z-index: 10; /* Размещаем поверх остального содержимого */
+  overflow: hidden; /* Обрезаем длинный текст */
+  white-space: nowrap; /* Отключаем перенос строк */
+  text-overflow: ellipsis; /* Добавляем многоточие в конце */
+}
+
+.horizontal-text-container span {
+  font-size: 1rem; /* Размер шрифта текста */
+  color: #333; /* Цвет текста */
+  font-weight: bold; /* Жирность шрифта */
+}
+
+
+img {
+  @apply rounded-lg;
+}
+h1 {
+  @apply text-gray-800 font-bold;
+}

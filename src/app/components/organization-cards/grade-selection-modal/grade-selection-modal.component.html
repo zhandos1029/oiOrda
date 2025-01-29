@@ -1,0 +1,11 @@
+<div class="modal-overlay" *ngIf="isOpen">
+    <div class="modal-container">
+        <h2 class="modal-title">{{ 'modal.title' | transloco }}</h2>
+        <div class="grade-buttons">
+            <button *ngFor="let grade of grades" (click)="onSelectGrade(grade)" class="grade-button hover-animate">
+                {{ grade === 'card' ? ('Карты' | transloco) : ('modal.selectClass' | transloco) + ' ' + grade }}
+            </button>
+        </div>
+        <button class="close-button hover-scale" (click)="onClose()">{{ 'modal.closeButton' | transloco }}</button>
+    </div>
+</div>

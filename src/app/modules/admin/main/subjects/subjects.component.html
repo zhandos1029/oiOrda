@@ -1,0 +1,23 @@
+<div class="flex flex-col flex-auto min-w-0" *transloco="let t">
+    <div class="flex-auto p-5 sm:p-10">
+        <div class="flex justify-between mb-2">
+            <div class="text-left">
+                <div class="hidden sm:flex items-center font-medium">
+                    <a class="text-primary-500 cursor-pointer" (click)="navigateTo('/main/page')">{{t('main')}}</a>
+                    <div class="ml-1 flex items-center">
+                        <mat-icon svgIcon="feather:chevron-right"></mat-icon>
+                        <span class="ml-1 text-gray-500">{{t('subjects')}}</span>
+                    </div>
+                </div>
+                <h1 class="mt-1 text-2xl sm:text-4xl tracking-tight leading-tight">{{t('subjects') | uppercase}}</h1>
+            </div>
+            <div class="text-right text-sm">
+                <p>{{t('subHeader')}}</p>
+            </div>
+        </div>
+
+        <div class="flex justify-center items-center py-8 px-5 rounded-lg shadow-custom bg-white">
+            <app-organization-cards [organizationControlCards]="organizationControlCards"></app-organization-cards>
+        </div>
+    </div>
+</div>

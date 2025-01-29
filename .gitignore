@@ -1,0 +1,9 @@
+/node_modules
+
+/.angular
+
+/.idea
+
+/package-lock.json
+
+/CREDITS
